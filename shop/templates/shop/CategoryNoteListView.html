@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+
+{% block content%}
+    {%if CategoryNoteListView%}
+      {% for goods in CategoryNoteListView %}
+        <ul>
+          <h1><a href={{goods.get_absolute_url}}>{{goods.category}} {{goods.producer}} {{goods.name}}</a></h1>
+          {{goods.description}}
+          <p>{{goods.price}}</p>
+        </ul>
+      {%endfor%}
+    {%else%}
+      <p>No notebooks</p>
+    {%endif%}
+{%endblock%}
+

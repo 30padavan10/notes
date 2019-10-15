@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content%}
+  <h1>{{notebook.category}} {{notebook.producer}} {{notebook.name}}</h1>
+  <img src="{{notebook.image.url}}" alt="">
+        <ul>
+          <li>Версия ОС: {{notebook.version_os}}</li>
+          <li>Дисплэй: {{notebook.display}}</li>
+          <li>Процессор: {{notebook.CPU}}</li>
+          <li>Объем памяти: {{notebook.memory}}</li>
+          <li>Видеокарта: {{notebook.GPU}}</li>
+          <li>Жесткий диск: {{notebook.HDD}}</li>
+        </ul>
+{%endblock%}
+

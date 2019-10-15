@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content%}
+    {%if CategorySmartListView%}
+      {% for smart in CategorySmartListView %}
+        <ul>
+          <h2><a href={{smart.get_absolute_url}}>{{smart.category}} {{smart.producer}} {{smart.name}}</a></h2>
+          {{smart.description}}
+          <p>{{smart.price}}</p>
+        </ul>
+      {%endfor%}
+    {%else%}
+      <p>No smartphones</p>
+    {%endif%}
+{%endblock%}

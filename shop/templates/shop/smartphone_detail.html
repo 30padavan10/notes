@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content%}
+  <h1>{{smartphone.category}} {{smartphone.producer}} {{smartphone.name}}</h1>
+
+        <img src="{{smartphone.image.url}}" alt="">
+        <ul>
+          <li>Год выпуска: {{smartphone.year}}</li>
+          <li>Версия ОС: {{smartphone.version_os}}</li>
+          <li>Число ядер: {{smartphone.num_core}}</li>
+          <li>Частота процессора: {{smartphone.frequency_cpu}}</li>
+          <li>Объем памяти: {{smartphone.memory}}</li>
+        </ul>
+{%endblock%}
+
