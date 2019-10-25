@@ -11,7 +11,7 @@
             <h5 class="card-title">{{goods.category}} {{goods.producer}} {{goods.name}}</h5>
             <img src="{{goods.image.url}}" class="mx-auto d-block" alt="" style=" height: 10rem;">
             <p class="card-text">{{goods.description|truncatechars:100}}</p>
-            <a href="{{smart.get_absolute_url}}" class="btn btn-primary">Подробнее</a>
+            <a href="{{goods.get_absolute_url}}" class="btn btn-primary">Подробнее</a>
         </div>
         </div>
         {%endfor%}
@@ -24,6 +24,7 @@
                 <h5 class="card-title">{{goods.category}} {{goods.producer}} {{goods.name}}</h5>
                 <img src="{{goods.image.url}}" class="mx-auto d-block" alt="" style=" height: 10rem;"> 
 					<p class="card-text">{{goods.description|truncatechars:100}}</p> 
+                    <a href="{{goods.get_absolute_url}}" class="btn btn-primary">Подробнее</a>
             </div>
         </div>
         {%endfor%}

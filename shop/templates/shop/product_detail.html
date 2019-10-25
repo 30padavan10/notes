@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+
+{% block content%}
+
+    {%if good.category == 'Смартфон'%}
+    <img src="{{good.image.url}}" alt=""
+    <ul>
+        <li>Год выпуска: {{good.smartphone.year}}</li>
+        <li>Версия ОС: {{good.smartphone.version_os}}</li> 
+        <li>Число ядер: {{good.smartphone.num_core}}</li>
+        <li>Частота процессора: {{good.smartphone.frequency_cpu}}</li>
+        <li>Объем памяти: {{good.smartphone.memory}}</li>
+    </ul>
+
+    {%else%}
+    <h1>{{good.category}} {{good.producer}} {{good.name}}</h1>
+        <img src="{{good.notebook.image.url}}" alt="">
+        <ul>
+            <li>Версия ОС: {{good.notebook.version_os}}</li>
+            <li>Дисплэй: {{good.notebook.display}}</li>
+            <li>Процессор: {{good.notebook.CPU}}</li>
+            <li>Объем памяти: {{good.notebook.memory}}</li>
+            <li>Видеокарта: {{good.notebook.GPU}}</li>
+            <li>Жесткий диск: {{good.notebook.HDD}}</li>
+        </ul>
+    {%endif%}
+{%endblock%}
+

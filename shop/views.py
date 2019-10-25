@@ -35,3 +35,9 @@ class GoodSmartDetail(generic.DetailView):
 
 class GoodNoteDetail(generic.DetailView):
         model = Notebook
+
+class GoodDetail(generic.DetailView):
+        model = Good
+        template_name = 'shop/product_detail.html'
+            
+
